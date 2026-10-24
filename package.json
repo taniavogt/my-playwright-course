@@ -3,17 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-"scripts": {
-  "test": "playwright test",
-  "test:smoke": "playwright test -g @smoke --project=chromium --workers=1",
-  "test:regression": "playwright test -g @regression --project=chromium --workers=1"
-},
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test -g @smoke --project=chromium --workers=1",
+    "test:regression": "playwright test -g @regression --project=chromium --workers=1"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.63.0",
-    "@types/node": "^26.6.3"
+    "@types/node": "^26.6.5"
   }
 }
