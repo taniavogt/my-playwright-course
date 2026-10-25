@@ -31,7 +31,14 @@ jobs:
       run: npx playwright install --with-deps
 
     - name: Execute Playwright Automation Tests
-      run: npx playwright test
+      run: |
+        if [ "${{ github.event_name }}" == "pull_request" ]; then
+          echo "Pull Request Quality Gate detected: Executing fast Smoke suite..."
+          npm run test:smoke
+        else
+          echo "Scheduled, push, or manual run detected: Executing full Regression suite..."
+          npm run test:regression
+        fi
     - name: Upload Test Evidence and HTML Reports
       uses: actions/upload-artifact@v4
       if: always() # ⚠️ THE CRITICAL CONDITION SWITCH
