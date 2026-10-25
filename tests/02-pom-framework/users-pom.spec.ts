@@ -12,7 +12,7 @@ import { UserFormPage } from '../../pages/UserFormPage';
   test.describe('SmartBank Application - User Management Workflows @smoke @regression', () => {
   
   // Run the tests one after another: Add -> Edit -> Delete
-  test.describe.configure({ mode: 'serial' });
+  // test.describe.configure({ mode: 'serial' });
 
   // Shared Login Data
   const branchName = 'Auburn';
