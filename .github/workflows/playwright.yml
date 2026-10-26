@@ -37,10 +37,10 @@ jobs:
       run: |
         if [ "${{ github.event_name }}" == "pull_request" ]; then
           echo "Pull Request Quality Gate detected: Executing fast Smoke suite..."
-          npm run test:smoke
+          npm run test:smoke -- --workers=1
         else
           echo "Scheduled, push, or manual run detected: Executing full Regression suite..."
-          npm run test:regression
+          npm run test:regression -- --workers=1
         fi
     - name: Upload Test Evidence and HTML Reports
       uses: actions/upload-artifact@v4

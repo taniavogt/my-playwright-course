@@ -9,7 +9,7 @@ import { CustomersPage } from '../../pages/CustomersPage';
 // Create a logical test suite block to group all customer management test scenarios together
   test.describe('SmartBank Application - Customer Management Workflows @smoke @regression', () => {
   // Run the tests one after another: Add -> Edit -> Delete  
- test.describe.configure({ mode: 'serial' });
+  // test.describe.configure({ mode: 'serial' });
   // Page objects shared by all three tests
   let loginPage: LoginPage;
   let dashboardPage: DashboardPage;
