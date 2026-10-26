@@ -120,7 +120,7 @@ import { UserFormPage } from '../../pages/UserFormPage';
     await userFormPage.createUserAndSave(newUserDetails);
 
     // Verify thr temporary confirmation mesage 'Created' appears in the top-right corner
-    await expect(page.getByRole('status')).toContainText('Fake text');
+    await expect(page.getByRole('status')).toContainText('Created');
     
     // DYNAMIC LOCATOR DECLARATION: Create a link locator specifically matching the username inside the table cell row
     const updatedUsernameLink = page.getByRole('link', { name: newUserDetails.username, exact: true });
