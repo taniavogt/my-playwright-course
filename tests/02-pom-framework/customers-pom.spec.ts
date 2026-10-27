@@ -67,7 +67,7 @@ import { CustomersPage } from '../../pages/CustomersPage';
     await customersPage.showAllRows();
 
     // FINAL ASSERTION: The new customer's row is in the table
-    await expect(customersPage.getCustomerRow('Fake button')).toBeVisible();
+    await expect(customersPage.getCustomerRow(accountNumber)).toBeVisible();
   });
 
   // ============================================================
